@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+    branch: main
+
+    media_folder: "images/uploads"
+    public_folder: "/images/uploads"
+
+    collections:
+      - name: "artigos"
+          label: "Artigos"
+              folder: "artigos"
+                  create: true
+                      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+                          fields:
+                                - {label: "Titulo", name: "title", widget: "string"}
+                                      - {label: "Data de Publicacao", name: "date", widget: "datetime"}
+                                            - {label: "Imagem de Capa", name: "thumbnail", widget: "image", required: false}
+                                                  - {label: "Resumo", name: "description", widget: "text", required: false}
+                                                        - {label: "Conteudo", name: "body", widget: "markdown"}
