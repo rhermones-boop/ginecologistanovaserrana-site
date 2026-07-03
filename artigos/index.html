@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artigos sobre Saúde Feminina — Dr. Rodrigo Hermones</title>
+  <meta name="description" content="Artigos e conteúdos educativos sobre ginecologia, saúde hormonal, menopausa, reposição hormonal e bem-estar feminino pelo Dr. Rodrigo Hermones.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --sage: #7A9E87;
+      --dark-green: #1B4332;
+      --gold: #C9A447;
+      --cream: #F5F0E8;
+      --text-dark: #1a1a1a;
+      --text-mid: #4a4a4a;
+      --text-light: #7a7a7a;
+    }
+    body { font-family: 'Lato', sans-serif; background: #fff; color: var(--text-dark); }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 5%;
+      background: rgba(245,240,232,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(201,164,71,0.2);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    }
+    .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--dark-green); text-decoration: none; }
+    .nav-brand span { color: var(--gold); }
+    .nav-links { list-style: none; display: flex; gap: 32px; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--text-mid); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--dark-green); }
+    .nav-cta { background: var(--dark-green); color: #fff !important; padding: 10px 22px; border-radius: 4px; }
+    .nav-cta:hover { background: var(--sage) !important; }
+
+    .page-hero {
+      background: var(--dark-green);
+      color: #fff;
+      padding: 140px 5% 80px;
+      text-align: center;
+    }
+    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 16px; }
+    .page-hero h1 em { color: var(--gold); font-style: italic; }
+    .page-hero p { font-size: 1rem; opacity: 0.8; max-width: 540px; margin: 0 auto; line-height: 1.7; }
+
+    .artigos-grid-section { max-width: 1100px; margin: 0 auto; padding: 72px 5%; }
+    .artigos-grid-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: var(--text-light); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 40px; }
+
+    .artigos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 32px; }
+
+    .card-artigo {
+      border: 1px solid rgba(201,164,71,0.18);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+      background: #fff;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-artigo:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(27,67,50,0.1); }
+    .card-artigo-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+    .card-categoria { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .card-titulo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--dark-green); line-height: 1.3; margin-bottom: 14px; }
+    .card-resumo { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; flex: 1; margin-bottom: 24px; }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid rgba(201,164,71,0.15); }
+    .card-data { font-size: 0.78rem; color: var(--text-light); }
+    .card-ler { font-size: 0.8rem; font-weight: 700; color: var(--sage); letter-spacing: 0.06em; text-transform: uppercase; }
+
+    footer { background: var(--dark-green); color: rgba(255,255,255,0.7); text-align: center; padding: 36px 5%; font-size: 0.82rem; margin-top: 80px; }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .artigos-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-brand">Dr. Rodrigo <span>Hermones</span></a>
+  <ul class="nav-links">
+    <li><a href="/#sobre">Sobre</a></li>
+    <li><a href="/#servicos">Serviços</a></li>
+    <li><a href="/artigos/" class="active">Artigos</a></li>
+    <li><a href="/#contato" class="nav-cta">Agendar Consulta</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <h1>Artigos sobre <em>Saúde Feminina</em></h1>
+  <p>Conteúdo educativo baseado em evidências sobre ginecologia, hormônios e bem-estar — por Dr. Rodrigo Hermones.</p>
+</div>
+
+<section class="artigos-grid-section">
+  <h2>Publicações Recentes</h2>
+  <div class="artigos-grid">
+
+    <a href="/artigos/insuficiencia-ovariana-prematura/" class="card-artigo">
+      <div class="card-artigo-body">
+        <p class="card-categoria">Ginecologia &amp; Hormônios</p>
+        <h2 class="card-titulo">Entenda os Sinais da Insuficiência Ovariana Prematura</h2>
+        <p class="card-resumo">A interrupção dos ciclos menstruais antes dos 40 anos é chamada de Insuficiência Ovariana Prematura (IOP). Entenda os sinais, sintomas e como tratar.</p>
+        <div class="card-footer">
+          <span class="card-data">📅 2 de julho de 2026</span>
+          <span class="card-ler">Ler artigo →</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <p>Dr. Rodrigo Hermones · Saúde &amp; Performance &nbsp;|&nbsp; © 2026 · CRM-MG 41272 · RQE 15018 · Nova Serrana, MG</p>
+  <p style="margin-top:8px;"><a href="/">Início</a> &nbsp;·&nbsp; <a href="/artigos/">Artigos</a> &nbsp;·&nbsp; <a href="/#contato">Contato</a></p>
+</footer>
+
+</body>
+</html>
