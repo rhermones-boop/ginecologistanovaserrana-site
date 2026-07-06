@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consulta de Pré-Natal — Dr. Rodrigo Hermones | Nova Serrana, MG</title>
+  <meta name="description" content="Consulta de pré-natal em Nova Serrana, MG. Acompanhamento completo da gestação, exames e orientações. Dr. Rodrigo Hermones, CRM-MG 41272."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://ginecologistanovaserrana.com.br/pre-natal"/>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Consulta de Pré-Natal — Dr. Rodrigo Hermones"/>
+  <meta property="og:description" content="Consulta de pré-natal em Nova Serrana, MG. Acompanhamento completo da gestação, exames e orientações. Dr. Rodrigo Hermones, CRM-MG 41272."/>
+  <meta property="og:url" content="https://ginecologistanovaserrana.com.br/pre-natal"/>
+  <meta property="og:type" content="website"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --verde:    #1B4332;
+      --verde-md: #2D6A4F;
+      --verde-lt: #D8EAE0;
+      --ouro:     #C9A447;
+      --ouro-lt:  #F7F0DC;
+      --creme:    #F5F0E8;
+      --texto:    #1a1a1a;
+      --pad:      clamp(48px,6vw,96px) clamp(20px,5vw,80px);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Lato',sans-serif;color:var(--texto);background:#fff}
+    a{text-decoration:none;color:inherit}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:var(--verde);padding:14px clamp(20px,5vw,80px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(201,164,71,0.2)}
+    .nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--creme);font-weight:600}
+    .nav-brand span{color:var(--ouro)}
+    .nav-links{display:flex;gap:28px;list-style:none}
+    .nav-links a{font-size:0.82rem;color:rgba(245,240,232,0.7);letter-spacing:0.06em;transition:color 0.2s}
+    .nav-links a:hover{color:var(--ouro)}
+    .nav-cta{background:var(--ouro);color:var(--verde)!important;padding:7px 18px;border-radius:2px;font-weight:700;letter-spacing:0.04em}
+    @media(max-width:700px){.nav-links{display:none}}
+
+    /* HERO */
+    .hero{background:var(--verde);padding:var(--pad);min-height:380px;display:flex;align-items:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;border-radius:50%;border:1px solid rgba(201,164,71,0.12)}
+    .hero::after{content:'';position:absolute;bottom:-80px;left:-40px;width:240px;height:240px;border-radius:50%;border:1px solid rgba(201,164,71,0.08)}
+    .hero-inner{position:relative;z-index:2;max-width:680px}
+    .hero-tag{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--ouro);margin-bottom:16px;padding:4px 12px;border:1px solid rgba(201,164,71,0.3);border-radius:2px}
+    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:20px}
+    .hero h1 em{color:var(--ouro);font-style:italic}
+    .hero-sub{font-size:1.05rem;font-weight:300;color:rgba(245,240,232,0.72);line-height:1.7;max-width:520px;margin-bottom:28px}
+    .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{padding:13px 28px;background:var(--ouro);color:var(--verde);font-weight:700;font-size:0.88rem;letter-spacing:0.06em;border-radius:2px;border:none;cursor:pointer;transition:opacity 0.2s}
+    .btn-primary:hover{opacity:0.9}
+    .btn-outline{padding:13px 28px;background:transparent;color:var(--creme);font-size:0.88rem;letter-spacing:0.06em;border:1px solid rgba(245,240,232,0.3);border-radius:2px;cursor:pointer;transition:border-color 0.2s}
+    .btn-outline:hover{border-color:var(--ouro);color:var(--ouro)}
+
+    /* BREADCRUMB */
+    .breadcrumb{padding:14px clamp(20px,5vw,80px);background:var(--creme);border-bottom:1px solid var(--verde-lt);font-size:0.78rem;color:#666}
+    .breadcrumb a{color:var(--verde-md)}
+    .breadcrumb a:hover{color:var(--ouro)}
+    .breadcrumb span{margin:0 6px;color:#bbb}
+
+    /* SEÇÕES */
+    section{padding:var(--pad)}
+    .s-tag{display:inline-block;font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--ouro);margin-bottom:12px}
+    .s-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:var(--verde);margin-bottom:18px;line-height:1.15}
+    .s-title em{color:var(--ouro);font-style:italic}
+    .s-text{font-size:1rem;font-weight:300;color:#444;line-height:1.8;max-width:680px;margin-bottom:24px}
+    .divider{width:48px;height:2px;background:var(--ouro);margin:18px 0 32px}
+
+    /* SOBRE */
+    #sobre{background:#fff}
+
+    /* COMO É REALIZADA - timeline */
+    #como{background:var(--creme)}
+    .etapas{display:flex;flex-direction:column;gap:0;max-width:760px;margin-top:8px}
+    .etapa{display:flex;gap:20px;position:relative;padding-bottom:28px}
+    .etapa:last-child{padding-bottom:0}
+    .etapa::before{content:'';position:absolute;left:19px;top:40px;bottom:0;width:1px;background:var(--verde-lt)}
+    .etapa:last-child::before{display:none}
+    .etapa-num{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--verde);color:var(--ouro);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.1rem;z-index:1}
+    .etapa-corpo{padding-top:6px}
+    .etapa-titulo{font-size:1rem;font-weight:700;color:var(--verde);margin-bottom:6px}
+    .etapa-texto{font-size:0.92rem;font-weight:300;color:#555;line-height:1.7}
+
+    /* BENEFÍCIOS */
+    #beneficios{background:var(--verde)}
+    #beneficios .s-title{color:#fff}
+    #beneficios .s-text{color:rgba(245,240,232,0.7)}
+    .ben-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:8px}
+    .ben-item{display:flex;align-items:flex-start;gap:12px;padding:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(201,164,71,0.2);border-radius:4px}
+    .ben-dot{width:8px;height:8px;border-radius:50%;background:var(--ouro);flex-shrink:0;margin-top:6px}
+    .ben-text{font-size:0.92rem;font-weight:300;color:rgba(245,240,232,0.85);line-height:1.5}
+
+    /* INDICAÇÕES */
+    #indicacoes{background:#fff}
+    .ind-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:8px}
+    .ind-item{display:flex;align-items:center;gap:10px;padding:14px 16px;background:var(--creme);border-left:3px solid var(--ouro);border-radius:0 4px 4px 0}
+    .ind-icon{color:var(--ouro);font-size:1rem;flex-shrink:0}
+    .ind-text{font-size:0.9rem;color:var(--verde);font-weight:400}
+
+    /* FAQ */
+    #faq{background:var(--creme)}
+    .faq-list{display:flex;flex-direction:column;gap:12px;max-width:720px}
+    .faq-item{border:1px solid var(--verde-lt);border-radius:4px;overflow:hidden;background:#fff}
+    .faq-q{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;background:#fff;font-weight:600;font-size:0.95rem;color:var(--verde)}
+    .faq-q::after{content:'＋';font-size:1.2rem;color:var(--ouro);transition:transform 0.2s;flex-shrink:0;margin-left:12px}
+    .faq-item.open .faq-q::after{content:'－'}
+    .faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.2s}
+    .faq-item.open .faq-a{max-height:260px;padding:16px 20px}
+    .faq-a p{font-size:0.92rem;color:#555;line-height:1.75;font-weight:300}
+
+    /* CTA SECTION */
+    #cta{background:linear-gradient(135deg,var(--verde) 0%,#0d2a1e 100%);text-align:center;padding:80px clamp(20px,5vw,80px)}
+    #cta .s-title{color:#fff;margin-bottom:12px}
+    #cta .s-text{color:rgba(245,240,232,0.65);margin:0 auto 32px;text-align:center}
+    .cta-word{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--ouro);padding:8px 24px;border:2px solid var(--ouro);border-radius:4px;margin-bottom:24px}
+    .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+    /* OUTROS SERVIÇOS */
+    #outros{background:#fff;padding:var(--pad)}
+    .outros-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:20px}
+    .outro-card{padding:20px 16px;background:var(--creme);border:1px solid var(--verde-lt);border-radius:4px;text-align:center;transition:border-color 0.2s,transform 0.2s;cursor:pointer}
+    .outro-card:hover{border-color:var(--ouro);transform:translateY(-2px)}
+    .outro-icon{font-size:1.8rem;margin-bottom:8px}
+    .outro-nome{font-size:0.88rem;font-weight:600;color:var(--verde)}
+
+    /* FOOTER */
+    footer{background:#0d2a1e;padding:36px clamp(20px,5vw,80px);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(201,164,71,0.15)}
+    .footer-brand{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--creme)}
+    .footer-brand span{color:var(--ouro)}
+    .footer-info{font-size:0.75rem;color:rgba(245,240,232,0.35);line-height:1.7;text-align:center}
+    .footer-copy{font-size:0.7rem;color:rgba(245,240,232,0.25);letter-spacing:0.05em}
+
+    /* WhatsApp float */
+    .wa-float{position:fixed;bottom:28px;right:28px;z-index:200;width:54px;height:54px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);font-size:1.5rem;transition:transform 0.2s}
+    .wa-float:hover{transform:scale(1.1)}
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-brand">Dr. Rodrigo <span>Hermones</span></a>
+  <ul class="nav-links">
+    <li><a href="/#sobre">Sobre</a></li>
+    <li><a href="/#servicos">Serviços</a></li>
+    <li><a href="/#contato">Contato</a></li>
+    <li><a href="https://wa.me/5537999999999?text=Olá! Gostaria de agendar uma consulta." class="nav-cta">Agendar</a></li>
+  </ul>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="/">Início</a><span>›</span><a href="/#servicos">Serviços</a><span>›</span>Consulta de Pré-Natal
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">Obstetrícia · Gestação</span>
+    <h1>Consulta de<br><em>Pré-Natal</em></h1>
+    <p class="hero-sub">Acompanhamento completo da sua gestação, do primeiro trimestre ao parto, com atenção humanizada e segurança em cada etapa.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/5537999999999?text=Olá! Tenho interesse em agendar uma consulta de Pré-Natal." class="btn-primary">Agendar consulta</a>
+      <a href="#sobre" class="btn-outline">Saiba mais</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <span class="s-tag">Entenda o acompanhamento</span>
+  <h2 class="s-title">O que é a consulta de <em>Pré-Natal</em>?</h2>
+  <div class="divider"></div>
+  <p class="s-text">O pré-natal é o acompanhamento médico realizado durante toda a gestação, com o objetivo de garantir a saúde da mãe e do bebê. Com 22 anos de experiência em obstetrícia, o Dr. Rodrigo Hermones conduz consultas periódicas, solicita exames no momento certo e orienta a gestante em cada fase — desde a confirmação da gravidez até o planejamento do parto.</p>
+</section>
+
+<!-- COMO É REALIZADA -->
+<section id="como">
+  <span class="s-tag">Passo a passo</span>
+  <h2 class="s-title">Como é <em>realizada</em> a consulta</h2>
+  <div class="divider"></div>
+  <div class="etapas">
+    <div class="etapa">
+      <div class="etapa-num">1</div>
+      <div class="etapa-corpo">
+        <div class="etapa-titulo">Anamnese e confirmação da gestação</div>
+        <div class="etapa-texto">Conversa detalhada sobre histórico de saúde, gestações anteriores, hábitos de vida e confirmação da idade gestacional, geralmente com apoio de exame de sangue (beta-hCG) e/ou ultrassonografia.</div>
+      </div>
+    </div>
+    <div class="etapa">
+      <div class="etapa-num">2</div>
+      <div class="etapa-corpo">
+        <div class="etapa-titulo">Exame físico e sinais vitais</div>
+        <div class="etapa-texto">Aferição de peso, pressão arterial e, a partir do segundo trimestre, medida da altura uterina e ausculta dos batimentos cardíacos fetais.</div>
+      </div>
+    </div>
+    <div class="etapa">
+      <div class="etapa-num">3</div>
+      <div class="etapa-corpo">
+        <div class="etapa-titulo">Solicitação de exames de rotina</div>
+        <div class="etapa-texto">Exames laboratoriais (sangue, urina, sorologias) e ultrassonografias são solicitados em cada trimestre, seguindo o calendário recomendado por FEBRASGO e ACOG.</div>
+      </div>
+    </div>
+    <div class="etapa">
+      <div class="etapa-num">4</div>
+      <div class="etapa-corpo">
+        <div class="etapa-titulo">Orientações personalizadas</div>
+        <div class="etapa-texto">Alimentação, suplementação de vitaminas (como ácido fólico e ferro), atividade física segura e sinais de alerta são discutidos em cada consulta.</div>
+      </div>
+    </div>
+    <div class="etapa">
+      <div class="etapa-num">5</div>
+      <div class="etapa-corpo">
+        <div class="etapa-titulo">Acompanhamento contínuo até o parto</div>
+        <div class="etapa-texto">As consultas se tornam mais frequentes conforme a gestação avança, culminando no planejamento do tipo de parto e preparo para o nascimento.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section id="beneficios">
+  <span class="s-tag" style="color:rgba(201,164,71,0.7)">O que você vai ganhar</span>
+  <h2 class="s-title">Benefícios do<br><em>acompanhamento</em></h2>
+  <div class="divider"></div>
+  <div class="ben-grid">
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Detecção precoce de riscos maternos e fetais</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Acompanhamento individualizado do desenvolvimento do bebê</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Orientação nutricional e de suplementação adequada</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Redução de complicações na gestação e no parto</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Suporte emocional em todas as fases da gravidez</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Planejamento antecipado do parto</div></div>
+  </div>
+</section>
+
+<!-- INDICAÇÕES -->
+<section id="indicacoes">
+  <span class="s-tag">Para quem é indicado</span>
+  <h2 class="s-title">Quem deve<br><em>iniciar o pré-natal?</em></h2>
+  <div class="divider"></div>
+  <div class="ind-grid">
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Confirmação recente de gravidez</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Gestantes de baixo e alto risco</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Planejamento de gravidez (pré-concepcional)</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Gestação após os 35 anos</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Histórico de complicações em gestações anteriores</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Dúvidas sobre sintomas da gravidez</span></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <span class="s-tag">Dúvidas frequentes</span>
+  <h2 class="s-title">Perguntas sobre<br><em>o Pré-Natal</em></h2>
+  <div class="divider"></div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">Quando devo iniciar o pré-natal?</div>
+      <div class="faq-a"><p>Assim que a gravidez for confirmada, idealmente ainda no primeiro trimestre. Quanto mais cedo iniciar, melhor o controle de exames e orientações essenciais.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Quantas consultas são necessárias durante a gestação?</div>
+      <div class="faq-a"><p>Em geral, consultas mensais até 28 semanas, quinzenais até 36 semanas e semanais a partir de então — podendo variar conforme o risco gestacional.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Quais exames são pedidos no pré-natal?</div>
+      <div class="faq-a"><p>Exames de sangue, urina, sorologias (como toxoplasmose e HIV), glicemia e ultrassonografias são solicitados em momentos específicos de cada trimestre.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">O Dr. Rodrigo acompanha até o parto?</div>
+      <div class="faq-a"><p>Sim. O acompanhamento é contínuo, com orientação sobre o tipo de parto mais adequado e preparo para o momento do nascimento.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">É possível tirar dúvidas entre as consultas?</div>
+      <div class="faq-a"><p>Sim, a equipe está disponível pelo WhatsApp para orientações e agendamentos extras em caso de dúvidas ou sintomas que precisem de avaliação.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <span class="s-tag" style="color:rgba(201,164,71,0.6)">Próximo passo</span>
+  <h2 class="s-title">Pronto para começar seu pré-natal?</h2>
+  <p class="s-text">Agende sua primeira consulta ou tire suas dúvidas diretamente com o Dr. Rodrigo Hermones.<br>Também pelo Instagram — comente <strong style="color:var(--ouro)">GESTANTE</strong> em qualquer post.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/5537999999999?text=Olá! Tenho interesse em agendar uma consulta de Pré-Natal." class="btn-primary">📱 Falar no WhatsApp</a>
+    <a href="https://instagram.com/drrodrigohermones" class="btn-outline" target="_blank">Instagram @drrodrigohermones</a>
+  </div>
+</section>
+
+<!-- OUTROS SERVIÇOS -->
+<section id="outros">
+  <span class="s-tag">Explore mais</span>
+  <h2 class="s-title">Outros <em>serviços</em></h2>
+  <div class="outros-grid">
+    <a href="/soroterapia" class="outro-card"><div class="outro-icon">💉</div><div class="outro-nome">Soroterapia</div></a>
+    <a href="/reposicao-hormonal" class="outro-card"><div class="outro-icon">🧬</div><div class="outro-nome">Reposição Hormonal</div></a>
+    <a href="/bioimpedancia" class="outro-card"><div class="outro-icon">📊</div><div class="outro-nome">Bioimpedância InBody</div></a>
+    <a href="/emagrecimento" class="outro-card"><div class="outro-icon">⚖️</div><div class="outro-nome">Emagrecimento</div></a>
+    <a href="/ginecologia-obstetricia" class="outro-card"><div class="outro-icon">🌸</div><div class="outro-nome">Ginecologia</div></a>
+    <a href="/medicina-integrativa" class="outro-card"><div class="outro-icon">🌿</div><div class="outro-nome">Medicina Integrativa</div></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Dr. Rodrigo <span>Hermones</span></div>
+  <div class="footer-info">
+    CRM-MG 41272 · Ginecologia, Obstetrícia e Medicina Integrativa<br>
+    Edifício Camel Center · Sala 1507 · Nova Serrana, MG
+  </div>
+  <div class="footer-copy">© 2026 Saúde & Performance</div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/5537999999999?text=Olá! Vim pelo site e gostaria de agendar." class="wa-float" target="_blank">💬</a>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
+});
+// Outros serviços — highlight da página atual
+document.querySelectorAll('.outro-card').forEach(card => {
+  if(card.href.includes(window.location.pathname)) {
+    card.style.borderColor = 'var(--ouro)';
+    card.style.background = 'var(--ouro-lt)';
+  }
+});
+</script>
+</body>
+</html>
