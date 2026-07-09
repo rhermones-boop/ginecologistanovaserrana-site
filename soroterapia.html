@@ -1,67 +1,157 @@
 <!DOCTYPE html><html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
 @charset "utf-8";
 
-@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtFmSq17w.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+:root { --verde: #1B4332; --verde-md: #2D6A4F; --verde-lt: #D8EAE0; --ouro: #C9A447; --ouro-lt: #F7F0DC; --creme: #F5F0E8; --texto: #1a1a1a; --pad: clamp(48px,6vw,96px) clamp(20px,5vw,80px); }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtMmSq17w.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+* { margin: 0px; padding: 0px; box-sizing: border-box; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtHmSq17w.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+body { font-family: Lato, sans-serif; color: var(--texto); background: rgb(255, 255, 255); }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtGmSq17w.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+a { text-decoration: none; color: inherit; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtImSo.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+nav { position: sticky; top: 0px; z-index: 100; background: var(--verde); padding: 14px clamp(20px, 5vw, 80px); display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(201, 164, 71, 0.2); }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtFmSq17w.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+.nav-brand { font-family: "Cormorant Garamond", serif; font-size: 1.1rem; color: var(--creme); font-weight: 600; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtMmSq17w.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+.nav-brand span { color: var(--ouro); }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtHmSq17w.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+.nav-links { display: flex; gap: 28px; list-style: none; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtGmSq17w.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+.nav-links a { font-size: 0.82rem; color: rgba(245, 240, 232, 0.7); letter-spacing: 0.06em; transition: color 0.2s; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtImSo.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+.nav-links a:hover { color: var(--ouro); }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpHtKgS4.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+.nav-cta { background: var(--ouro); padding: 7px 18px; border-radius: 2px; font-weight: 700; letter-spacing: 0.04em; color: var(--verde) !important; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYrXtKgS4.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+}
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpntKgS4.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+.hero { background: var(--verde); padding: var(--pad); min-height: 380px; display: flex; align-items: center; position: relative; overflow: hidden; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKgS4.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+.hero::before { content: ""; position: absolute; top: -60px; right: -60px; width: 300px; height: 300px; border-radius: 50%; border: 1px solid rgba(201, 164, 71, 0.12); }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+.hero::after { content: ""; position: absolute; bottom: -80px; left: -40px; width: 240px; height: 240px; border-radius: 50%; border: 1px solid rgba(201, 164, 71, 0.08); }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpHtKgS4.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+.hero-inner { position: relative; z-index: 2; max-width: 680px; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYrXtKgS4.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+.hero-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro); margin-bottom: 16px; padding: 4px 12px; border: 1px solid rgba(201, 164, 71, 0.3); border-radius: 2px; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpntKgS4.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+.hero h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 700; color: rgb(255, 255, 255); line-height: 1.1; margin-bottom: 20px; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKgS4.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+.hero h1 em { color: var(--ouro); font-style: italic; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+.hero-sub { font-size: 1.05rem; font-weight: 300; color: rgba(245, 240, 232, 0.72); line-height: 1.7; max-width: 520px; margin-bottom: 28px; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpHtKgS4.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYrXtKgS4.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+.btn-primary { padding: 13px 28px; background: var(--ouro); color: var(--verde); font-weight: 700; font-size: 0.88rem; letter-spacing: 0.06em; border-radius: 2px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; transition: opacity 0.2s; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpntKgS4.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+.btn-primary:hover { opacity: 0.9; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKgS4.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+.btn-outline { padding: 13px 28px; background: transparent; color: var(--creme); font-size: 0.88rem; letter-spacing: 0.06em; border: 1px solid rgba(245, 240, 232, 0.3); border-radius: 2px; cursor: pointer; transition: border-color 0.2s; }
 
-@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+.btn-outline:hover { border-color: var(--ouro); color: var(--ouro); }
 
-@font-face { font-family: Lato; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh7USSwaPGR_p.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+.breadcrumb { padding: 14px clamp(20px, 5vw, 80px); background: var(--creme); border-bottom: 1px solid var(--verde-lt); font-size: 0.78rem; color: rgb(102, 102, 102); }
 
-@font-face { font-family: Lato; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh7USSwiPGQ.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+.breadcrumb a { color: var(--verde-md); }
 
-@font-face { font-family: Lato; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjxAwXjeu.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+.breadcrumb a:hover { color: var(--ouro); }
 
-@font-face { font-family: Lato; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjx4wXg.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+.breadcrumb span { margin: 0px 6px; color: rgb(187, 187, 187); }
 
-@font-face { font-family: Lato; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwaPGR_p.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+section { padding: var(--pad); }
 
-@font-face { font-family: Lato; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwiPGQ.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+.s-tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro); margin-bottom: 12px; }
+
+.s-title { font-family: "Cormorant Garamond", serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--verde); margin-bottom: 18px; line-height: 1.15; }
+
+.s-title em { color: var(--ouro); font-style: italic; }
+
+.s-text { font-size: 1rem; font-weight: 300; color: rgb(68, 68, 68); line-height: 1.8; max-width: 680px; margin-bottom: 24px; }
+
+.divider { width: 48px; height: 2px; background: var(--ouro); margin: 18px 0px 32px; }
+
+#sobre { background: rgb(255, 255, 255); }
+
+#beneficios { background: var(--verde); }
+
+#beneficios .s-title { color: rgb(255, 255, 255); }
+
+#beneficios .s-text { color: rgba(245, 240, 232, 0.7); }
+
+.ben-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-top: 8px; }
+
+.ben-item { display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(201, 164, 71, 0.2); border-radius: 4px; }
+
+.ben-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ouro); flex-shrink: 0; margin-top: 6px; }
+
+.ben-text { font-size: 0.92rem; font-weight: 300; color: rgba(245, 240, 232, 0.85); line-height: 1.5; }
+
+#indicacoes { background: var(--creme); }
+
+.ind-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin-top: 8px; }
+
+.ind-item { display: flex; align-items: center; gap: 10px; padding: 14px 16px; background: rgb(255, 255, 255); border-left: 3px solid var(--ouro); border-radius: 0px 4px 4px 0px; }
+
+.ind-icon { color: var(--ouro); font-size: 1rem; flex-shrink: 0; }
+
+.ind-text { font-size: 0.9rem; color: var(--verde); font-weight: 400; }
+
+#faq { background: rgb(255, 255, 255); }
+
+.faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 720px; }
+
+.faq-item { border: 1px solid var(--verde-lt); border-radius: 4px; overflow: hidden; }
+
+.faq-q { padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: var(--creme); font-weight: 600; font-size: 0.95rem; color: var(--verde); }
+
+.faq-q::after { content: "＋"; font-size: 1.2rem; color: var(--ouro); transition: transform 0.2s; flex-shrink: 0; margin-left: 12px; }
+
+.faq-item.open .faq-q::after { content: "－"; }
+
+.faq-a { padding: 0px 20px; max-height: 0px; overflow: hidden; transition: max-height 0.3s, padding 0.2s; }
+
+.faq-item.open .faq-a { max-height: 200px; padding: 16px 20px; }
+
+.faq-a p { font-size: 0.92rem; color: rgb(85, 85, 85); line-height: 1.75; font-weight: 300; }
+
+#cta { background: linear-gradient(135deg,var(--verde) 0%,#0d2a1e 100%); text-align: center; padding: 80px clamp(20px, 5vw, 80px); }
+
+#cta .s-title { color: rgb(255, 255, 255); margin-bottom: 12px; }
+
+#cta .s-text { color: rgba(245, 240, 232, 0.65); margin: 0px auto 32px; text-align: center; }
+
+.cta-word { display: inline-block; font-family: "Cormorant Garamond", serif; font-size: 2rem; font-weight: 700; color: var(--ouro); padding: 8px 24px; border: 2px solid var(--ouro); border-radius: 4px; margin-bottom: 24px; }
+
+.cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+#outros { background: var(--creme); padding: var(--pad); }
+
+.outros-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 20px; }
+
+.outro-card { padding: 20px 16px; background: rgb(255, 255, 255); border: 1px solid var(--verde-lt); border-radius: 4px; text-align: center; transition: border-color 0.2s, transform 0.2s; cursor: pointer; }
+
+.outro-card:hover { border-color: var(--ouro); transform: translateY(-2px); }
+
+.outro-icon { font-size: 1.8rem; margin-bottom: 8px; }
+
+.outro-nome { font-size: 0.88rem; font-weight: 600; color: var(--verde); }
+
+footer { background: rgb(13, 42, 30); padding: 36px clamp(20px, 5vw, 80px); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-top: 1px solid rgba(201, 164, 71, 0.15); }
+
+.footer-brand { font-family: "Cormorant Garamond", serif; font-size: 0.95rem; color: var(--creme); }
+
+.footer-brand span { color: var(--ouro); }
+
+.footer-info { font-size: 0.75rem; color: rgba(245, 240, 232, 0.35); line-height: 1.7; text-align: center; }
+
+.footer-copy { font-size: 0.7rem; color: rgba(245, 240, 232, 0.25); letter-spacing: 0.05em; }
+
+.wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 200; width: 54px; height: 54px; background: rgb(37, 211, 102); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: rgba(37, 211, 102, 0.4) 0px 4px 20px; font-size: 1.5rem; transition: transform 0.2s; }
+
+.wa-float:hover { transform: scale(1.1); }
 --
 </style>
   
@@ -104,7 +194,7 @@
     <p class="hero-sub">Reposição intravenosa de vitaminas e minerais com absorção total — protocolo individualizado para o seu corpo.</p>
     <div class="hero-btns">
       <a href="https://wa.me/5537999999999?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Soroterapia%20Personalizada." class="btn-primary">Agendar consulta</a>
-      <a href="soroterapia.html#sobre" class="btn-outline">Saiba mais</a>
+      <a href="#sobre" class="btn-outline">Saiba mais</a>
     </div>
   </div>
 </section>
