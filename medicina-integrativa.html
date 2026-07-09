@@ -307,5 +307,21 @@ footer { background: rgb(13, 42, 30); padding: 36px clamp(20px, 5vw, 80px); disp
 
 
 
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
+});
+// Outros serviços — highlight da página atual
+document.querySelectorAll('.outro-card').forEach(card => {
+  if(card.href.includes(window.location.pathname)) {
+    card.style.borderColor = 'var(--ouro)';
+    card.style.background = 'var(--ouro-lt)';
+  }
+});
+</script>
+
 </body></html>
 --
