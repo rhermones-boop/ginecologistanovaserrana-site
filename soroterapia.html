@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+@charset "utf-8";
+
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtFmSq17w.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtMmSq17w.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtHmSq17w.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtGmSq17w.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtImSo.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtFmSq17w.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtMmSq17w.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtHmSq17w.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtGmSq17w.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtImSo.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpHtKgS4.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYrXtKgS4.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpntKgS4.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKgS4.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpHtKgS4.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYrXtKgS4.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpntKgS4.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKgS4.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpHtKgS4.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYrXtKgS4.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYpntKgS4.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKgS4.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Lato; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh7USSwaPGR_p.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Lato; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh7USSwiPGQ.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Lato; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjxAwXjeu.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Lato; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjx4wXg.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Lato; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwaPGR_p.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Lato; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwiPGQ.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+--
+</style>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soroterapia Personalizada — Dr. Rodrigo Hermones | Nova Serrana, MG</title>
+  <meta name="description" content="Soroterapia personalizada em Nova Serrana, MG. Reposição intravenosa de vitaminas e minerais com protocolo individualizado. Dr. Rodrigo Hermones, CRM-MG 41272.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ginecologistanovaserrana.com.br/soroterapia">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Soroterapia Personalizada — Dr. Rodrigo Hermones">
+  <meta property="og:description" content="Soroterapia personalizada em Nova Serrana, MG. Reposição intravenosa de vitaminas e minerais com protocolo individualizado. Dr. Rodrigo Hermones, CRM-MG 41272.">
+  <meta property="og:url" content="https://ginecologistanovaserrana.com.br/soroterapia">
+  <meta property="og:type" content="website">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-brand">Dr. Rodrigo <span>Hermones</span></a>
+  <ul class="nav-links">
+    <li><a href="/#sobre">Sobre</a></li>
+    <li><a href="/#servicos">Serviços</a></li>
+    <li><a href="/#contato">Contato</a></li>
+    <li><a href="https://wa.me/5537999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." class="nav-cta">Agendar</a></li>
+  </ul>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="/">Início</a><span>›</span><a href="/#servicos">Serviços</a><span>›</span>Soroterapia Personalizada
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">Soroterapia IV</span>
+    <h1>Soroterapia<br><em>Personalizada</em></h1>
+    <p class="hero-sub">Reposição intravenosa de vitaminas e minerais com absorção total — protocolo individualizado para o seu corpo.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/5537999999999?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Soroterapia%20Personalizada." class="btn-primary">Agendar consulta</a>
+      <a href="soroterapia.html#sobre" class="btn-outline">Saiba mais</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <span class="s-tag">Entenda o tratamento</span>
+  <h2 class="s-title">O que é Soroterapia?</h2>
+  <div class="divider"></div>
+  <p class="s-text">A soroterapia é a infusão endovenosa de vitaminas, minerais e antioxidantes diretamente na corrente sanguínea. Com absorção próxima a 100%, é muito mais eficiente do que suplementos orais, que dependem do sistema digestivo para serem absorvidos.</p>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section id="beneficios">
+  <span class="s-tag" style="color:rgba(201,164,71,0.7)">O que você vai ganhar</span>
+  <h2 class="s-title">Benefícios e<br><em>resultados esperados</em></h2>
+  <div class="divider"></div>
+  <div class="ben-grid">
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Aumento imediato de energia e disposição</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Melhora da imunidade e resistência a infecções</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Recuperação muscular acelerada</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Redução do estresse oxidativo</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Melhora da qualidade do sono</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Hidratação celular profunda</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Combate à fadiga crônica</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Suporte antienvelhecimento</div></div>
+
+  </div>
+</section>
+
+<!-- INDICAÇÕES -->
+<section id="indicacoes">
+  <span class="s-tag">Para quem é indicado</span>
+  <h2 class="s-title">Quem pode<br><em>se beneficiar?</em></h2>
+  <div class="divider"></div>
+  <div class="ind-grid">
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Cansaço e fadiga crônica</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Queda de imunidade frequente</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Deficiências vitamínicas confirmadas</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Recuperação pós-cirúrgica</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Atletas e alto desempenho</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Estresse intenso e burnout</span></div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <span class="s-tag">Dúvidas frequentes</span>
+  <h2 class="s-title">Perguntas sobre<br><em>Soroterapia Personalizada</em></h2>
+  <div class="divider"></div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">Quanto tempo dura a sessão?</div>
+      <div class="faq-a"><p>Entre 30 e 60 minutos, dependendo do protocolo. O paciente permanece confortavelmente reclinado durante a infusão.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Dói?</div>
+      <div class="faq-a"><p>A aplicação é feita com uma agulha fina. A sensação é mínima, semelhante a um exame de sangue convencional.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Quantas sessões são necessárias?</div>
+      <div class="faq-a"><p>Depende do objetivo. O protocolo é individualizado com base nos exames de cada paciente.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Qualquer pessoa pode fazer?</div>
+      <div class="faq-a"><p>A soroterapia é prescrita após avaliação clínica. Alguns protocolos têm contraindicações específicas — por isso a consulta médica é sempre o primeiro passo.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <span class="s-tag" style="color:rgba(201,164,71,0.6)">Próximo passo</span>
+  <h2 class="s-title">Pronto para começar?</h2>
+  <p class="s-text">Agende sua avaliação ou tire suas dúvidas diretamente com o Dr. Rodrigo Hermones.<br>Também pelo Instagram — comente <strong style="color:var(--ouro)">SOROTERAPIA</strong> em qualquer post.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/5537999999999?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Soroterapia%20Personalizada." class="btn-primary">📱 Falar no WhatsApp</a>
+    <a href="https://instagram.com/drrodrigohermones" class="btn-outline" target="_blank">Instagram @drrodrigohermones</a>
+  </div>
+</section>
+
+<!-- OUTROS SERVIÇOS -->
+<section id="outros">
+  <span class="s-tag">Explore mais</span>
+  <h2 class="s-title">Outros <em>serviços</em></h2>
+  <div class="outros-grid">
+    <a href="/soroterapia" class="outro-card"><div class="outro-icon">💉</div><div class="outro-nome">Soroterapia</div></a>
+    <a href="/reposicao-hormonal" class="outro-card"><div class="outro-icon">🧬</div><div class="outro-nome">Reposição Hormonal</div></a>
+    <a href="/bioimpedancia" class="outro-card"><div class="outro-icon">📊</div><div class="outro-nome">Bioimpedância InBody</div></a>
+    <a href="/emagrecimento" class="outro-card"><div class="outro-icon">⚖️</div><div class="outro-nome">Emagrecimento</div></a>
+    <a href="/ginecologia-obstetricia" class="outro-card"><div class="outro-icon">🌸</div><div class="outro-nome">Ginecologia</div></a>
+    <a href="/medicina-integrativa" class="outro-card"><div class="outro-icon">🌿</div><div class="outro-nome">Medicina Integrativa</div></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Dr. Rodrigo <span>Hermones</span></div>
+  <div class="footer-info">
+    CRM-MG 41272 · Ginecologia, Obstetrícia e Medicina Integrativa<br>
+    Edifício Camel Center · Sala 1507 · Nova Serrana, MG
+  </div>
+  <div class="footer-copy">© 2026 Saúde &amp; Performance</div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/5537999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar." class="wa-float" target="_blank">💬</a>
+
+
+
+</body></html>
+--
