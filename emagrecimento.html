@@ -1,0 +1,311 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+@charset "utf-8";
+
+:root { --verde: #1B4332; --verde-md: #2D6A4F; --verde-lt: #D8EAE0; --ouro: #C9A447; --ouro-lt: #F7F0DC; --creme: #F5F0E8; --texto: #1a1a1a; --pad: clamp(48px,6vw,96px) clamp(20px,5vw,80px); }
+
+* { margin: 0px; padding: 0px; box-sizing: border-box; }
+
+body { font-family: Lato, sans-serif; color: var(--texto); background: rgb(255, 255, 255); }
+
+a { text-decoration: none; color: inherit; }
+
+nav { position: sticky; top: 0px; z-index: 100; background: var(--verde); padding: 14px clamp(20px, 5vw, 80px); display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(201, 164, 71, 0.2); }
+
+.nav-brand { font-family: "Cormorant Garamond", serif; font-size: 1.1rem; color: var(--creme); font-weight: 600; }
+
+.nav-brand span { color: var(--ouro); }
+
+.nav-links { display: flex; gap: 28px; list-style: none; }
+
+.nav-links a { font-size: 0.82rem; color: rgba(245, 240, 232, 0.7); letter-spacing: 0.06em; transition: color 0.2s; }
+
+.nav-links a:hover { color: var(--ouro); }
+
+.nav-cta { background: var(--ouro); padding: 7px 18px; border-radius: 2px; font-weight: 700; letter-spacing: 0.04em; color: var(--verde) !important; }
+
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+}
+
+.hero { background: var(--verde); padding: var(--pad); min-height: 380px; display: flex; align-items: center; position: relative; overflow: hidden; }
+
+.hero::before { content: ""; position: absolute; top: -60px; right: -60px; width: 300px; height: 300px; border-radius: 50%; border: 1px solid rgba(201, 164, 71, 0.12); }
+
+.hero::after { content: ""; position: absolute; bottom: -80px; left: -40px; width: 240px; height: 240px; border-radius: 50%; border: 1px solid rgba(201, 164, 71, 0.08); }
+
+.hero-inner { position: relative; z-index: 2; max-width: 680px; }
+
+.hero-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro); margin-bottom: 16px; padding: 4px 12px; border: 1px solid rgba(201, 164, 71, 0.3); border-radius: 2px; }
+
+.hero h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 700; color: rgb(255, 255, 255); line-height: 1.1; margin-bottom: 20px; }
+
+.hero h1 em { color: var(--ouro); font-style: italic; }
+
+.hero-sub { font-size: 1.05rem; font-weight: 300; color: rgba(245, 240, 232, 0.72); line-height: 1.7; max-width: 520px; margin-bottom: 28px; }
+
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.btn-primary { padding: 13px 28px; background: var(--ouro); color: var(--verde); font-weight: 700; font-size: 0.88rem; letter-spacing: 0.06em; border-radius: 2px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; transition: opacity 0.2s; }
+
+.btn-primary:hover { opacity: 0.9; }
+
+.btn-outline { padding: 13px 28px; background: transparent; color: var(--creme); font-size: 0.88rem; letter-spacing: 0.06em; border: 1px solid rgba(245, 240, 232, 0.3); border-radius: 2px; cursor: pointer; transition: border-color 0.2s; }
+
+.btn-outline:hover { border-color: var(--ouro); color: var(--ouro); }
+
+.breadcrumb { padding: 14px clamp(20px, 5vw, 80px); background: var(--creme); border-bottom: 1px solid var(--verde-lt); font-size: 0.78rem; color: rgb(102, 102, 102); }
+
+.breadcrumb a { color: var(--verde-md); }
+
+.breadcrumb a:hover { color: var(--ouro); }
+
+.breadcrumb span { margin: 0px 6px; color: rgb(187, 187, 187); }
+
+section { padding: var(--pad); }
+
+.s-tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro); margin-bottom: 12px; }
+
+.s-title { font-family: "Cormorant Garamond", serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--verde); margin-bottom: 18px; line-height: 1.15; }
+
+.s-title em { color: var(--ouro); font-style: italic; }
+
+.s-text { font-size: 1rem; font-weight: 300; color: rgb(68, 68, 68); line-height: 1.8; max-width: 680px; margin-bottom: 24px; }
+
+.divider { width: 48px; height: 2px; background: var(--ouro); margin: 18px 0px 32px; }
+
+#sobre { background: rgb(255, 255, 255); }
+
+#beneficios { background: var(--verde); }
+
+#beneficios .s-title { color: rgb(255, 255, 255); }
+
+#beneficios .s-text { color: rgba(245, 240, 232, 0.7); }
+
+.ben-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-top: 8px; }
+
+.ben-item { display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(201, 164, 71, 0.2); border-radius: 4px; }
+
+.ben-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ouro); flex-shrink: 0; margin-top: 6px; }
+
+.ben-text { font-size: 0.92rem; font-weight: 300; color: rgba(245, 240, 232, 0.85); line-height: 1.5; }
+
+#indicacoes { background: var(--creme); }
+
+.ind-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin-top: 8px; }
+
+.ind-item { display: flex; align-items: center; gap: 10px; padding: 14px 16px; background: rgb(255, 255, 255); border-left: 3px solid var(--ouro); border-radius: 0px 4px 4px 0px; }
+
+.ind-icon { color: var(--ouro); font-size: 1rem; flex-shrink: 0; }
+
+.ind-text { font-size: 0.9rem; color: var(--verde); font-weight: 400; }
+
+#faq { background: rgb(255, 255, 255); }
+
+.faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 720px; }
+
+.faq-item { border: 1px solid var(--verde-lt); border-radius: 4px; overflow: hidden; }
+
+.faq-q { padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: var(--creme); font-weight: 600; font-size: 0.95rem; color: var(--verde); }
+
+.faq-q::after { content: "＋"; font-size: 1.2rem; color: var(--ouro); transition: transform 0.2s; flex-shrink: 0; margin-left: 12px; }
+
+.faq-item.open .faq-q::after { content: "－"; }
+
+.faq-a { padding: 0px 20px; max-height: 0px; overflow: hidden; transition: max-height 0.3s, padding 0.2s; }
+
+.faq-item.open .faq-a { max-height: 200px; padding: 16px 20px; }
+
+.faq-a p { font-size: 0.92rem; color: rgb(85, 85, 85); line-height: 1.75; font-weight: 300; }
+
+#cta { background: linear-gradient(135deg,var(--verde) 0%,#0d2a1e 100%); text-align: center; padding: 80px clamp(20px, 5vw, 80px); }
+
+#cta .s-title { color: rgb(255, 255, 255); margin-bottom: 12px; }
+
+#cta .s-text { color: rgba(245, 240, 232, 0.65); margin: 0px auto 32px; text-align: center; }
+
+.cta-word { display: inline-block; font-family: "Cormorant Garamond", serif; font-size: 2rem; font-weight: 700; color: var(--ouro); padding: 8px 24px; border: 2px solid var(--ouro); border-radius: 4px; margin-bottom: 24px; }
+
+.cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+#outros { background: var(--creme); padding: var(--pad); }
+
+.outros-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 20px; }
+
+.outro-card { padding: 20px 16px; background: rgb(255, 255, 255); border: 1px solid var(--verde-lt); border-radius: 4px; text-align: center; transition: border-color 0.2s, transform 0.2s; cursor: pointer; }
+
+.outro-card:hover { border-color: var(--ouro); transform: translateY(-2px); }
+
+.outro-icon { font-size: 1.8rem; margin-bottom: 8px; }
+
+.outro-nome { font-size: 0.88rem; font-weight: 600; color: var(--verde); }
+
+footer { background: rgb(13, 42, 30); padding: 36px clamp(20px, 5vw, 80px); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-top: 1px solid rgba(201, 164, 71, 0.15); }
+
+.footer-brand { font-family: "Cormorant Garamond", serif; font-size: 0.95rem; color: var(--creme); }
+
+.footer-brand span { color: var(--ouro); }
+
+.footer-info { font-size: 0.75rem; color: rgba(245, 240, 232, 0.35); line-height: 1.7; text-align: center; }
+
+.footer-copy { font-size: 0.7rem; color: rgba(245, 240, 232, 0.25); letter-spacing: 0.05em; }
+
+.wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 200; width: 54px; height: 54px; background: rgb(37, 211, 102); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: rgba(37, 211, 102, 0.4) 0px 4px 20px; font-size: 1.5rem; transition: transform 0.2s; }
+
+.wa-float:hover { transform: scale(1.1); }
+--
+</style>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emagrecimento Hormonal — Dr. Rodrigo Hermones | Nova Serrana, MG</title>
+  <meta name="description" content="Emagrecimento hormonal em Nova Serrana, MG. Protocolos individualizados com tirzepatida, GLP-1 e bioimpedância. Dr. Rodrigo Hermones, CRM-MG 41272.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ginecologistanovaserrana.com.br/emagrecimento">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Emagrecimento Hormonal — Dr. Rodrigo Hermones">
+  <meta property="og:description" content="Emagrecimento hormonal em Nova Serrana, MG. Protocolos individualizados com tirzepatida, GLP-1 e bioimpedância. Dr. Rodrigo Hermones, CRM-MG 41272.">
+  <meta property="og:url" content="https://ginecologistanovaserrana.com.br/emagrecimento">
+  <meta property="og:type" content="website">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-brand">Dr. Rodrigo <span>Hermones</span></a>
+  <ul class="nav-links">
+    <li><a href="/#sobre">Sobre</a></li>
+    <li><a href="/#servicos">Serviços</a></li>
+    <li><a href="/#contato">Contato</a></li>
+    <li><a href="https://wa.me/5537999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." class="nav-cta">Agendar</a></li>
+  </ul>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="/">Início</a><span>›</span><a href="/#servicos">Serviços</a><span>›</span>Emagrecimento Hormonal
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">Protocolos de Emagrecimento</span>
+    <h1>Emagrecimento<br><em>Hormonal</em></h1>
+    <p class="hero-sub">Protocolos médicos individualizados que tratam a causa real do peso — e não apenas a consequência.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/5537999999999?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Emagrecimento%20Hormonal." class="btn-primary">Agendar consulta</a>
+      <a href="#sobre" class="btn-outline">Saiba mais</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <span class="s-tag">Entenda o tratamento</span>
+  <h2 class="s-title">Por que o emagrecimento hormonal é diferente?</h2>
+  <div class="divider"></div>
+  <p class="s-text">O ganho de peso frequentemente tem causas hormonais e metabólicas que nenhuma dieta resolve sozinha. Cortisol elevado, desregulação de insulina, desequilíbrio tireoidiano e deficiências vitamínicas são fatores que bloqueiam o emagrecimento mesmo quando a alimentação e o exercício estão corretos.</p>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section id="beneficios">
+  <span class="s-tag" style="color:rgba(201,164,71,0.7)">O que você vai ganhar</span>
+  <h2 class="s-title">Benefícios e<br><em>resultados esperados</em></h2>
+  <div class="divider"></div>
+  <div class="ben-grid">
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Identificação da causa real do ganho de peso</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Protocolos com tirzepatida e GLP-1 quando indicado</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Correção de deficiências nutricionais</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Regulação hormonal integrada</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Acompanhamento com InBody 270s</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Plano alimentar individualizado</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Redução de gordura visceral</div></div>
+    <div class="ben-item"><div class="ben-dot"></div><div class="ben-text">Manutenção de massa muscular</div></div>
+
+  </div>
+</section>
+
+<!-- INDICAÇÕES -->
+<section id="indicacoes">
+  <span class="s-tag">Para quem é indicado</span>
+  <h2 class="s-title">Quem pode<br><em>se beneficiar?</em></h2>
+  <div class="divider"></div>
+  <div class="ind-grid">
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Peso que não sai mesmo com dieta e exercício</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Ganho de peso inexplicável</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Resistência à insulina e diabetes tipo 2</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Obesidade com componente hormonal</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Síndrome metabólica</span></div>
+    <div class="ind-item"><span class="ind-icon">✓</span><span class="ind-text">Emagrecimento pós-menopausa</span></div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <span class="s-tag">Dúvidas frequentes</span>
+  <h2 class="s-title">Perguntas sobre<br><em>Emagrecimento Hormonal</em></h2>
+  <div class="divider"></div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">O que é tirzepatida?</div>
+      <div class="faq-a"><p>É um medicamento que age nos hormônios que controlam fome e saciedade, ajudando o corpo a usar a gordura como energia. É prescrita após avaliação médica individualizada.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Preciso de dieta restritiva?</div>
+      <div class="faq-a"><p>Não necessariamente. O protocolo é adaptado à sua rotina — sem radicalismo. O foco é sustentabilidade a longo prazo.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Quanto tempo leva para emagrecer?</div>
+      <div class="faq-a"><p>Os primeiros resultados costumam aparecer entre 30 e 60 dias. O ritmo depende do seu perfil metabólico e do protocolo adotado.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Existe risco de efeito sanfona?</div>
+      <div class="faq-a"><p>Com o protocolo correto — incluindo manutenção hormonal e muscular — o risco de reganho é muito menor do que em dietas convencionais.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <span class="s-tag" style="color:rgba(201,164,71,0.6)">Próximo passo</span>
+  <h2 class="s-title">Pronto para começar?</h2>
+  <p class="s-text">Agende sua avaliação ou tire suas dúvidas diretamente com o Dr. Rodrigo Hermones.<br>Também pelo Instagram — comente <strong style="color:var(--ouro)">EMAGRECER</strong> em qualquer post.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/5537999999999?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Emagrecimento%20Hormonal." class="btn-primary">📱 Falar no WhatsApp</a>
+    <a href="https://instagram.com/drrodrigohermones" class="btn-outline" target="_blank">Instagram @drrodrigohermones</a>
+  </div>
+</section>
+
+<!-- OUTROS SERVIÇOS -->
+<section id="outros">
+  <span class="s-tag">Explore mais</span>
+  <h2 class="s-title">Outros <em>serviços</em></h2>
+  <div class="outros-grid">
+    <a href="/soroterapia" class="outro-card"><div class="outro-icon">💉</div><div class="outro-nome">Soroterapia</div></a>
+    <a href="/reposicao-hormonal" class="outro-card"><div class="outro-icon">🧬</div><div class="outro-nome">Reposição Hormonal</div></a>
+    <a href="/bioimpedancia" class="outro-card"><div class="outro-icon">📊</div><div class="outro-nome">Bioimpedância InBody</div></a>
+    <a href="/emagrecimento" class="outro-card"><div class="outro-icon">⚖️</div><div class="outro-nome">Emagrecimento</div></a>
+    <a href="/ginecologia-obstetricia" class="outro-card"><div class="outro-icon">🌸</div><div class="outro-nome">Ginecologia</div></a>
+    <a href="/medicina-integrativa" class="outro-card"><div class="outro-icon">🌿</div><div class="outro-nome">Medicina Integrativa</div></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Dr. Rodrigo <span>Hermones</span></div>
+  <div class="footer-info">
+    CRM-MG 41272 · Ginecologia, Obstetrícia e Medicina Integrativa<br>
+    Edifício Camel Center · Sala 1507 · Nova Serrana, MG
+  </div>
+  <div class="footer-copy">© 2026 Saúde &amp; Performance</div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/5537999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar." class="wa-float" target="_blank">💬</a>
+
+
+
+</body></html>
+--
