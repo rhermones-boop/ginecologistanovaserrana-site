@@ -1,5 +1,5 @@
 ---
-title: "Entenda os Sinais da Insuficiência Ovariana Prematura"
+title: "Menopausa precoce"
 date: 2026-07-02T00:00:00.000Z
 description: "A interrupção dos ciclos menstruais antes dos 40 anos é chamada de Insuficiência Ovariana Prematura (IOP). Entenda os sinais, sintomas e como tratar."
 ---
