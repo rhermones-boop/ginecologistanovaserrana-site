@@ -76,6 +76,28 @@
     }
     .nav-cta:hover { background: var(--gold) !important; color: var(--dark-green) !important; }
 
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 32px;
+      height: 32px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 101;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--dark-green);
+      border-radius: 2px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
     /* ── HERO ── */
     #hero {
       min-height: 100vh;
@@ -767,7 +789,23 @@
       .processo-grid { grid-template-columns: 1fr; }
       .depo-grid { grid-template-columns: 1fr; }
       #contato { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--cream);
+        padding: 8px 5% 20px;
+        border-bottom: 1px solid rgba(201,164,71,0.2);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      }
+      .nav-links.nav-open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 12px 0; }
       .hero-credentials { gap: 20px; }
       .form-row { grid-template-columns: 1fr; }
     }
@@ -778,7 +816,10 @@
 <!-- NAV -->
 <nav id="navbar" class="scrolled">
   <a href="#hero" class="nav-brand">Dr. Rodrigo <span>Hermones</span></a>
-  <ul class="nav-links">
+  <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#servicos">Serviços</a></li>
     <li><a href="#processo">Como Funciona</a></li>
@@ -1099,4 +1140,21 @@
 
 
 
+<script>
+  (function () {
+    var toggle = document.getElementById('nav-toggle');
+    var links = document.getElementById('nav-links');
+    if (!toggle || !links) return;
+    toggle.addEventListener('click', function () {
+      var isOpen = links.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    links.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        links.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
 </body></html>
